@@ -5,8 +5,7 @@ Created on Tue Sep  5 01:08:40 2017
 @author: lenovo
 """
 
-#Craps Game , Just run the Craps() function and it tells you if you gonna win or lose
-#Good luck
+
 
 from random import randrange
 
@@ -16,20 +15,20 @@ def rolling():
     dice = dice1 + dice2
     return dice
 
-def Craps():
+def craps():
     diceNum = rolling()
     if diceNum == 7 or diceNum == 11:
-        return True
+        return print('You win')
     
     if diceNum == 2 or diceNum == 3 or diceNum == 12:
-        return False
+        return print('You lose')
     
     while diceNum == 4 or diceNum == 5 or diceNum == 6 or diceNum == 8 or diceNum == 9 or diceNum == 10:
         diceNum2 = rolling()
         if diceNum2 == diceNum:
-            return True
+            return print('You win')
         if diceNum2 == 7:
-            return False
+            return print('You lose')
         
-    
+craps()
     
